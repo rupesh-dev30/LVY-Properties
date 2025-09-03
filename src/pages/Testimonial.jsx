@@ -4,6 +4,7 @@ import user2 from "../assets/hero.jpg";
 import user3 from "../assets/hero.jpg";
 import user4 from "../assets/hero.jpg";
 import user5 from "../assets/hero.jpg";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -12,44 +13,49 @@ const testimonials = [
     highlight:
       "Thoroughly Professional, Helpful and Understanding Real Estate Agents!",
     content:
-      "“I had contacted many estate agents before coming to Faridabad but there was something extraordinary about Mr. LVY that I chose to go with him for my independent house villa. He takes care to maintain contact to see if there are things that he could help with. I will highly recommend Mr. LVY, in particular, if you are looking for a thoroughly professional, helpful and understanding estate agents for your needs.”",
+      "I had contacted many estate agents before coming to Faridabad but there was something extraordinary about Mr. LVY that I chose to go with him for my independent house villa. He takes care to maintain contact to see if there are things that he could help with. I will highly recommend Mr. LVY, in particular, if you are looking for a thoroughly professional, helpful and understanding estate agents for your needs.",
     image: user1,
+    rating: 5
   },
   {
     name: "TILAK SATIJA",
     title: "C.E.O (NAVYUG PROPERTIES)",
     highlight: "Very sharp, knowledgeable and efficient!",
     content:
-      "“They are very nice people and I am very happy with them and their work. They did what others couldn’t do and within a short span of time. Very genuine and honest people. Keep up the good work and keep bringing a smile on someone’s face like you did for me. Lots of best wishes, blessings, love, light, prosperity, and power to both of you.”",
+      "They are very nice people and I am very happy with them and their work. They did what others couldn't do and within a short span of time. Very genuine and honest people. Keep up the good work and keep bringing a smile on someone's face like you did for me. Lots of best wishes, blessings, love, light, prosperity, and power to both of you.",
     image: user2,
+    rating: 5
   },
   {
     name: "MAHESH SHARMA",
     title: "C.O.O (RAMA PROPERTIES)",
     highlight: "Brilliant Team, Relentless Efforts & Very Helpful!",
     content:
-      "“I have met several real estate agents in Faridabad and somehow Mr. Sanjay LVY has an in-born gift to understand exactly what clients want and he delivers bang-on! It was a pleasure to deal with them and honestly I have recommended them to a lot of my friends already!!”",
+      "I have met several real estate agents in Faridabad and somehow Mr. Sanjay LVY has an in-born gift to understand exactly what clients want and he delivers bang-on! It was a pleasure to deal with them and honestly I have recommended them to a lot of my friends already!!",
     image: user3,
+    rating: 5
   },
   {
-    name: "NEW TESTIMONIAL 1",
-    title: "MANAGER (NEW COMPANY)",
+    name: "RAJESH GUPTA",
+    title: "MANAGER (PREMIUM ESTATES)",
     highlight: "Outstanding service and support!",
-    content: "“Excellent communication and very professional team.”",
+    content: "Excellent communication and very professional team. They guided us through every step of the property purchase process with patience and expertise.",
     image: user4,
+    rating: 5
   },
   {
-    name: "NEW TESTIMONIAL 2",
-    title: "CEO (ANOTHER COMPANY)",
+    name: "PRIYA SHARMA",
+    title: "CEO (GOLDEN PROPERTIES)",
     highlight: "Highly recommend for real estate needs!",
-    content: "“Quick responses and reliable advice throughout the purchase.”",
+    content: "Quick responses and reliable advice throughout the purchase. Their market knowledge and negotiation skills saved us both time and money.",
     image: user5,
+    rating: 5
   },
 ];
 
 const Testimonial = () => {
-  // State to track visible count (1, 2 or 3)
   const [visibleCount, setVisibleCount] = useState(3);
+  const [startIdx, setStartIdx] = useState(0);
 
   // Update visibleCount based on window width (responsive breakpoints)
   useEffect(() => {
@@ -64,10 +70,6 @@ const Testimonial = () => {
   }, []);
 
   const maxStartIdx = testimonials.length - visibleCount;
-  const containerWidthPercent = visibleCount * 100;
-  const cardWidthPercent = 100 / visibleCount;
-
-  const [startIdx, setStartIdx] = useState(0);
 
   // Reset startIdx if visibleCount changes to avoid empty slide
   useEffect(() => {
@@ -84,77 +86,159 @@ const Testimonial = () => {
     setStartIdx((prev) => (prev < maxStartIdx ? prev + 1 : prev));
   };
 
-  const translatePercentage = -startIdx * cardWidthPercent;
+  const translatePercentage = -startIdx * (100 / visibleCount);
 
   return (
-    <section className="w-full bg-white py-12 relative">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-8">
-          <p className="text-indigo-600 uppercase tracking-widest mb-2 text-sm font-semibold flex items-center justify-center relative">
-            <span className="inline-block h-0.5 w-12 bg-indigo-600 mr-3" />
-            Testimonial
-            <span className="inline-block h-0.5 w-12 bg-indigo-600 ml-3" />
+    <section className="w-full bg-gradient-to-br from-blue-50 to-white py-20 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, #3b82f6 2px, transparent 2px)`,
+          backgroundSize: '60px 60px'
+        }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 relative">
+        {/* Header Section */}
+        <div className="text-center mb-16 space-y-6">
+          <div className="flex items-center justify-center gap-3 text-blue-600 mb-4">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-blue-600"></div>
+            <p className="uppercase tracking-widest text-sm font-semibold">
+              Testimonials
+            </p>
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-blue-600"></div>
+          </div>
+          
+          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            Industry
+            <br />
+            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
+              Patronage
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Hear from our valued clients and industry partners about their experiences with LVY Properties
           </p>
-          <h1 className="text-4xl font-bold mb-4">Industry Patronage</h1>
         </div>
-        <div className="overflow-hidden">
-          <div
-            className="flex gap-4 transition-transform duration-500 ease-in-out"
-            style={{
-              width: `${containerWidthPercent}%`,
-              transform: `translateX(${translatePercentage}%)`,
-            }}
-          >
-            {testimonials.map((t, idx) => (
-              <div
+
+        {/* Testimonials Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div
+              className="flex gap-6 transition-transform duration-500 ease-in-out"
+              style={{
+                width: `${(testimonials.length / visibleCount) * 100}%`,
+                transform: `translateX(${translatePercentage}%)`,
+              }}
+            >
+              {testimonials.map((testimonial, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 overflow-hidden"
+                  style={{ width: `${100 / testimonials.length}%` }}
+                >
+                  {/* Card Header */}
+                  <div className="relative p-8 pb-6">
+                    {/* Quote Icon */}
+                    <div className="absolute top-6 right-6 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-300">
+                      <Quote className="w-6 h-6 text-white" />
+                    </div>
+
+                    {/* Profile Section */}
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="relative">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 group-hover:border-blue-200 transition-colors duration-300"
+                        />
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                          <Quote className="w-3 h-3 text-white" />
+                        </div>
+                      </div>
+                      
+                      <div className="flex-1">
+                        <h3 className="font-bold text-gray-900 text-lg group-hover:text-blue-600 transition-colors duration-300">
+                          {testimonial.name}
+                        </h3>
+                        <p className="text-sm text-gray-500 font-medium">
+                          {testimonial.title}
+                        </p>
+                        
+                        {/* Star Rating */}
+                        <div className="flex gap-1 mt-2">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Highlight */}
+                    <div className="mb-4">
+                      <h4 className="font-bold text-blue-900 text-lg leading-tight">
+                        {testimonial.highlight}
+                      </h4>
+                    </div>
+
+                    {/* Content */}
+                    <div className="text-gray-700 leading-relaxed">
+                      <p className="italic">"{testimonial.content}"</p>
+                    </div>
+
+                    {/* Decorative Element */}
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="flex justify-center gap-4 mt-8">
+            <button
+              onClick={prev}
+              disabled={startIdx === 0}
+              className={`group w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                startIdx === 0
+                  ? "bg-gray-200 cursor-not-allowed text-gray-400"
+                  : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:scale-110"
+              }`}
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform duration-200" />
+            </button>
+            
+            <button
+              onClick={next}
+              disabled={startIdx === maxStartIdx}
+              className={`group w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
+                startIdx === maxStartIdx
+                  ? "bg-gray-200 cursor-not-allowed text-gray-400"
+                  : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:scale-110"
+              }`}
+              aria-label="Next testimonials"
+            >
+              <ChevronRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform duration-200" />
+            </button>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {Array.from({ length: maxStartIdx + 1 }).map((_, idx) => (
+              <button
                 key={idx}
-                className="flex-1 flex flex-col items-center bg-white rounded-lg shadow-md p-6 border border-gray-300 mx-1 max-w-[350px]"
-                style={{ width: `${cardWidthPercent}%` }}
-              >
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-20 h-20 rounded-full object-cover mb-4 border-4 border-gray-100"
-                />
-                <div className="font-bold uppercase text-lg">{t.name}</div>
-                <div className="text-xs text-gray-400 font-semibold mb-2">
-                  {t.title}
-                </div>
-                <div className="font-semibold text-indigo-900 mb-3 text-center">
-                  {t.highlight}
-                </div>
-                <div className="text-sm text-gray-700 text-center">
-                  {t.content}
-                </div>
-              </div>
+                onClick={() => setStartIdx(idx)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  idx === startIdx
+                    ? "bg-gradient-to-r from-blue-500 to-blue-600 scale-125"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to testimonial set ${idx + 1}`}
+              />
             ))}
           </div>
-        </div>
-        <div className="flex gap-4 justify-center mt-6">
-          <button
-            onClick={prev}
-            disabled={startIdx === 0}
-            className={`w-12 h-12 rounded flex items-center justify-center text-2xl font-bold transition ${
-              startIdx === 0
-                ? "bg-indigo-300 cursor-not-allowed text-white"
-                : "bg-indigo-900 text-white hover:bg-indigo-700"
-            }`}
-            aria-label="Previous"
-          >
-            ←
-          </button>
-          <button
-            onClick={next}
-            disabled={startIdx === maxStartIdx}
-            className={`w-12 h-12 rounded flex items-center justify-center text-2xl font-bold transition ${
-              startIdx === maxStartIdx
-                ? "bg-indigo-300 cursor-not-allowed text-white"
-                : "bg-indigo-900 text-white hover:bg-indigo-700"
-            }`}
-            aria-label="Next"
-          >
-            →
-          </button>
         </div>
       </div>
     </section>
