@@ -61,18 +61,18 @@ const History = () => {
       <div className="max-w-7xl mx-auto px-4 relative">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
-          <div className="flex items-center justify-center gap-3 text-blue-600 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-blue-600"></div>
+          <div className="flex items-center justify-center gap-3 text-amber-600 mb-4">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-amber-500 to-amber-600"></div>
             <p className="uppercase tracking-widest text-sm font-semibold">
               Our History
             </p>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-blue-600"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-r from-amber-500 to-amber-600"></div>
           </div>
 
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             The Story of Our
             <br />
-            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
               Success
             </span>
           </h1>
@@ -91,8 +91,8 @@ const History = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {achievements.map((achievement, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <achievement.icon className="w-8 h-8 text-blue-600" />
+              <div className="bg-gradient-to-br from-amber-50 to-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <achievement.icon className="w-8 h-8 text-amber-600" />
               </div>
               <div className="text-3xl font-bold text-gray-900 mb-2">
                 {achievement.number}
@@ -112,7 +112,7 @@ const History = () => {
               <img
                 src={historyImg}
                 alt="3D house on blueprint"
-                className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-[650px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
 
@@ -134,7 +134,7 @@ const History = () => {
               <h2 className="text-3xl font-bold text-gray-900">
                 Frequently Asked Questions
                 <br />
-                <span className="text-blue-600">in Real Estate</span>
+                <span className="text-amber-600">in Real Estate</span>
               </h2>
               <p className="text-gray-600">
                 Get answers to the most common questions about real estate
@@ -153,16 +153,16 @@ const History = () => {
                     className="flex items-center justify-between w-full px-6 py-5 focus:outline-none text-left hover:bg-gray-50 transition-colors duration-200"
                   >
                     <div className="flex items-start space-x-4 flex-1">
-                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mt-0.5">
+                      <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center mt-0.5">
                         <CheckCircle className="w-3 h-3 text-white" />
                       </div>
-                      <span className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-200">
+                      <span className="font-semibold text-gray-800 group-hover:text-amber-600 transition-colors duration-200">
                         {faq.question}
                       </span>
                     </div>
                     <ChevronDown
                       className={`w-5 h-5 text-gray-400 transition-transform duration-300 flex-shrink-0 ml-4 ${
-                        openIdx === idx ? "rotate-180 text-blue-600" : ""
+                        openIdx === idx ? "rotate-180 text-amber-600" : ""
                       }`}
                     />
                   </button>

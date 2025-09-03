@@ -11,10 +11,10 @@ const Navbar = () => {
   // Logo placeholder - using a simple design
   const LogoComponent = () => (
     <div className="flex items-center gap-3">
-      <div className="w-16 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-lg flex items-center justify-center shadow-lg">
-        <img src={logo} alt="LVY Properties" className="h-16 w-16 rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-110" />
+      <div className="w-16 h-12 flex items-center justify-center shadow-lg">
+        <img src={logo} alt="LVY Properties" className="lg:h-15 lg:w-15 h-12 w-12 rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-110" />
       </div>
-      <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+      <h1 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">
         LVY Properties
       </h1>
     </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
                     }`}
                   >
                     {item.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600 transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 )}
               </li>

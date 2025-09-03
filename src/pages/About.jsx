@@ -1,30 +1,5 @@
 import Detail from "../assets/detail.jpg";
-import PurchaseLogo from "../assets/building.png";
-import SaleLogo from "../assets/buildings.png";
-import ConstructionLogo from "../assets/increasing.png";
-import Container from "../components/Container";
 import { Building2, TrendingUp, Users, Award } from "lucide-react";
-
-const containers = [
-  {
-    title: "Purchase",
-    logo: PurchaseLogo,
-    description: "We deal with all the purchasing in Real Estate",
-    color: "from-blue-500 to-blue-600"
-  },
-  {
-    title: "Sale",
-    logo: SaleLogo,
-    description: "We deal in all Saleable options between the Buyer and Seller",
-    color: "from-emerald-500 to-emerald-600"
-  },
-  {
-    title: "Construction",
-    logo: ConstructionLogo,
-    description: "We also deal in construction part of Real Estate",
-    color: "from-amber-500 to-amber-600"
-  },
-];
 
 const stats = [
   { number: "30+", label: "Years Experience", icon: Award },
@@ -114,7 +89,7 @@ const About = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="bg-gradient-to-br from-amber-50 to-amber-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -124,28 +99,6 @@ const About = () => {
               <div className="text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
-        </div>
-
-        {/* Service Cards */}
-        <div className="space-y-8">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Comprehensive real estate solutions tailored to meet your unique needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {containers.map((container, idx) => (
-              <Container
-                key={idx}
-                title={container.title}
-                description={container.description}
-                logo={container.logo}
-                color={container.color}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>

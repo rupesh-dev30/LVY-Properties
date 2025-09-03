@@ -101,18 +101,18 @@ const Testimonial = () => {
       <div className="max-w-7xl mx-auto px-4 relative">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
-          <div className="flex items-center justify-center gap-3 text-blue-600 mb-4">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-blue-600"></div>
+          <div className="flex items-center justify-center gap-3 text-amber-600 mb-4">
+            <div className="w-12 h-0.5 bg-gradient-to-r from-transparent to-amber-600"></div>
             <p className="uppercase tracking-widest text-sm font-semibold">
               Testimonials
             </p>
-            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-blue-600"></div>
+            <div className="w-12 h-0.5 bg-gradient-to-l from-transparent to-amber-600"></div>
           </div>
           
           <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             Industry
             <br />
-            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-amber-600 bg-clip-text text-transparent">
               Patronage
             </span>
           </h1>
@@ -140,10 +140,7 @@ const Testimonial = () => {
                 >
                   {/* Card Header */}
                   <div className="relative p-8 pb-6">
-                    {/* Quote Icon */}
-                    <div className="absolute top-6 right-6 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-300">
-                      <Quote className="w-6 h-6 text-white" />
-                    </div>
+                    
 
                     {/* Profile Section */}
                     <div className="flex items-center gap-4 mb-6">
@@ -153,13 +150,13 @@ const Testimonial = () => {
                           alt={testimonial.name}
                           className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 group-hover:border-blue-200 transition-colors duration-300"
                         />
-                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center">
                           <Quote className="w-3 h-3 text-white" />
                         </div>
                       </div>
                       
                       <div className="flex-1">
-                        <h3 className="font-bold text-gray-900 text-lg group-hover:text-blue-600 transition-colors duration-300">
+                        <h3 className="font-bold text-gray-900 text-lg group-hover:text-amber-600 transition-colors duration-300">
                           {testimonial.name}
                         </h3>
                         <p className="text-sm text-gray-500 font-medium">
@@ -177,7 +174,7 @@ const Testimonial = () => {
 
                     {/* Highlight */}
                     <div className="mb-4">
-                      <h4 className="font-bold text-blue-900 text-lg leading-tight">
+                      <h4 className="font-bold text-amber-900 text-lg leading-tight">
                         {testimonial.highlight}
                       </h4>
                     </div>
@@ -188,7 +185,7 @@ const Testimonial = () => {
                     </div>
 
                     {/* Decorative Element */}
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-amber-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                   </div>
                 </div>
               ))}
@@ -203,7 +200,7 @@ const Testimonial = () => {
               className={`group w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                 startIdx === 0
                   ? "bg-gray-200 cursor-not-allowed text-gray-400"
-                  : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:scale-110"
+                  : "bg-gradient-to-r from-amber-500 to-amber-600 text-white hover:shadow-lg hover:scale-110"
               }`}
               aria-label="Previous testimonials"
             >
@@ -216,7 +213,7 @@ const Testimonial = () => {
               className={`group w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                 startIdx === maxStartIdx
                   ? "bg-gray-200 cursor-not-allowed text-gray-400"
-                  : "bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:scale-110"
+                  : "bg-gradient-to-r from-amber-500 to-amber-600 text-white hover:shadow-lg hover:scale-110"
               }`}
               aria-label="Next testimonials"
             >
@@ -232,7 +229,7 @@ const Testimonial = () => {
                 onClick={() => setStartIdx(idx)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   idx === startIdx
-                    ? "bg-gradient-to-r from-blue-500 to-blue-600 scale-125"
+                    ? "bg-gradient-to-r from-amber-500 to-amber-600 scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
                 aria-label={`Go to testimonial set ${idx + 1}`}
