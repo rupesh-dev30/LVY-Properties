@@ -10,10 +10,9 @@ const Navbar = () => {
     <nav className="w-full shadow-md fixed bg-white top-0 left-0 z-50 text-black">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-
           <div className="flex items-center gap-3">
-            <img src={logo} alt="logo" className="h-12 w-12" />
-            <h1 className="text-lg font-bold">Taneja Properties</h1>
+            <img src={logo} alt="logo" className="h-20 w-20" />
+            <h1 className="text-lg font-bold">LVY Properties</h1>
           </div>
 
           <ul className="hidden md:flex items-center gap-8 text-sm font-bold">

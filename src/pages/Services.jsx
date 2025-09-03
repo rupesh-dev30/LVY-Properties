@@ -1,7 +1,7 @@
 import purchaseImg from "../assets/hero.jpg";
 import saleImg from "../assets/hero.jpg";
-import villaImg from "../assets/hero1.jpg";
-import rentImg from "../assets/hero.jpg";
+import villaImg from "../assets/hero2.jpg";
+import rentImg from "../assets/hero1.jpg";
 import ServiceCard from "../components/ServiceCard";
 
 const services = [

@@ -9,9 +9,10 @@ const testimonials = [
   {
     name: "SURENDER KUMAR",
     title: "DIRECTOR (CITIZEN PROPERTIES)",
-    highlight: "Thoroughly Professional, Helpful and Understanding Real Estate Agents!",
+    highlight:
+      "Thoroughly Professional, Helpful and Understanding Real Estate Agents!",
     content:
-      "“I had contacted many estate agents before coming to Faridabad but there was something extraordinary about Mr. Taneja that I chose to go with him for my independent house villa. He takes care to maintain contact to see if there are things that he could help with. I will highly recommend Mr. Taneja, in particular, if you are looking for a thoroughly professional, helpful and understanding estate agents for your needs.”",
+      "“I had contacted many estate agents before coming to Faridabad but there was something extraordinary about Mr. LVY that I chose to go with him for my independent house villa. He takes care to maintain contact to see if there are things that he could help with. I will highly recommend Mr. LVY, in particular, if you are looking for a thoroughly professional, helpful and understanding estate agents for your needs.”",
     image: user1,
   },
   {
@@ -27,7 +28,7 @@ const testimonials = [
     title: "C.O.O (RAMA PROPERTIES)",
     highlight: "Brilliant Team, Relentless Efforts & Very Helpful!",
     content:
-      "“I have met several real estate agents in Faridabad and somehow Mr. Sanjay Taneja has an in-born gift to understand exactly what clients want and he delivers bang-on! It was a pleasure to deal with them and honestly I have recommended them to a lot of my friends already!!”",
+      "“I have met several real estate agents in Faridabad and somehow Mr. Sanjay LVY has an in-born gift to understand exactly what clients want and he delivers bang-on! It was a pleasure to deal with them and honestly I have recommended them to a lot of my friends already!!”",
     image: user3,
   },
   {
@@ -107,7 +108,7 @@ const Testimonial = () => {
             {testimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="flex-1 flex flex-col items-center bg-white rounded-lg shadow-md p-6 border mx-1 max-w-[350px]"
+                className="flex-1 flex flex-col items-center bg-white rounded-lg shadow-md p-6 border border-gray-300 mx-1 max-w-[350px]"
                 style={{ width: `${cardWidthPercent}%` }}
               >
                 <img
@@ -122,7 +123,9 @@ const Testimonial = () => {
                 <div className="font-semibold text-indigo-900 mb-3 text-center">
                   {t.highlight}
                 </div>
-                <div className="text-sm text-gray-700 text-center">{t.content}</div>
+                <div className="text-sm text-gray-700 text-center">
+                  {t.content}
+                </div>
               </div>
             ))}
           </div>

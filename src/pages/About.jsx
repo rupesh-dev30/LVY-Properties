@@ -1,4 +1,4 @@
-import Photo from "../assets/phone.png";
+import Detail from "../assets/detail.jpg";
 import PurchaseLogo from "../assets/building.png";
 import SaleLogo from "../assets/buildings.png";
 import ConstructionLogo from "../assets/increasing.png";
@@ -36,25 +36,25 @@ const About = () => {
 
           <p className="text-gray-700 leading-relaxed">
             Leveraging the years of experience, we have gained across all our
-            projects, Taneja Properties is here to provide a
+            projects, LVY Properties is here to provide a
             state-of-the-infrastructure and luxury lifestyle through our BPTP
             Plots in Faridabad and BPTP Builder Floors in Faridabad
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to Taneja Properties, where we make luxury lifestyle and
+            Welcome to LVY Properties, where we make luxury lifestyle and
             cutting-edge amenities available to all at affordable price...
           </p>
           <p className="text-gray-700 leading-relaxed">
-            Once you choose Taneja Properties, you give yourself an opportunity
-            to live a high-class and comfortable lifestyle...
+            Once you choose LVY Properties, you give yourself an opportunity to
+            live a high-class and comfortable lifestyle...
           </p>
         </div>
 
         {/* Right Side - Image */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-end h-[400px]">
           <img
-            src={Photo}
-            alt="Taneja Properties"
+            src={Detail}
+            alt="LVY Properties"
             className="w-full max-w-md rounded-lg shadow-lg"
           />
         </div>
