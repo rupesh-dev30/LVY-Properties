@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { ChevronDown } from "lucide-react";
-
 import hero1 from "../assets/hero1.jpeg";
 import hero2 from "../assets/hero2.jpeg";
 import hero3 from "../assets/hero3.jpeg";
@@ -33,7 +32,7 @@ const Header = () => {
       {images.map((img, index) => (
         <div
           key={index}
-          className={`absolute inset-0 w-full h-screen transition-all duration-2000 ease-in-out ${
+          className={`absolute inset-0 w-full h-screen transition-all duration-[2000ms] ease-in-out ${
             index === current ? "opacity-100 scale-105" : "opacity-0 scale-100"
           }`}
         >
@@ -42,7 +41,7 @@ const Header = () => {
             alt={`luxury property ${index + 1}`}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
       ))}
 
