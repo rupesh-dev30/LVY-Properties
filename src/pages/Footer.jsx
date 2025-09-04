@@ -145,7 +145,7 @@ const Footer = () => (
           <div>
             <h3 className="font-bold text-white text-2xl mb-6 flex items-center gap-2">
               Quick Links
-              <div className="w-8 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600"></div>
+              <div className="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600"></div>
             </h3>
             <ul className="space-y-3">
               {usefulLinks.map((link, idx) => (

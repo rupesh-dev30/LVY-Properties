@@ -89,11 +89,11 @@ const Testimonial = () => {
   const translatePercentage = -startIdx * (100 / visibleCount);
 
   return (
-    <section className="w-full bg-gradient-to-br from-blue-50 to-white py-20 relative overflow-hidden">
+    <section className="w-full py-20 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, #3b82f6 2px, transparent 2px)`,
+          backgroundImage: `radial-gradient(circle at 50% 50%, #FFFAE3 2px, transparent 2px)`,
           backgroundSize: '60px 60px'
         }}></div>
       </div>
