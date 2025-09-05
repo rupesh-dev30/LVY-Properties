@@ -33,9 +33,9 @@ const faqs = [
 ];
 
 const achievements = [
-  { icon: Award, number: "30+", label: "Years of Excellence" },
-  { icon: Users, number: "500+", label: "Satisfied Clients" },
-  { icon: Building2, number: "100+", label: "Successful Projects" },
+  { icon: Award, number: "10+", label: "Years of Excellence" },
+  { icon: Users, number: "300+", label: "Satisfied Clients" },
+  { icon: Building2, number: "50+", label: "Successful Projects" },
 ];
 
 const History = () => {
@@ -78,12 +78,11 @@ const History = () => {
           </h1>
 
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            LVY Properties Sector 10 Faridabad started with a vision to give the
-            customer premium property with affordable market rates. With 30 years
-            of experience in Real Estate, Mr Sanjay LVY has assured that every
-            customer should get a property with all the facilities that one wants.
-            Since 1995 we are serving the customers with great pride and a
-            responsibility too.
+            LVY Properties, operating in Faridabad and Gurugram, 
+            was founded with a vision to provide customers premium properties at affordable market rates. 
+            With over 10 years of expertise in real estate, Mr. Sandeep LVY ensures that every customer 
+            finds a home equipped with all desired facilities. Since 2010, we have been proudly serving 
+            our customers with dedication and responsibility.
           </p>
         </div>
 

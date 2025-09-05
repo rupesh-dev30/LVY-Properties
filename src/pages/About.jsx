@@ -2,9 +2,9 @@ import Detail from "../assets/detail.jpg";
 import { Building2, TrendingUp, Users, Award } from "lucide-react";
 
 const stats = [
-  { number: "30+", label: "Years Experience", icon: Award },
-  { number: "500+", label: "Happy Clients", icon: Users },
-  { number: "100+", label: "Projects Completed", icon: Building2 },
+  { number: "10+", label: "Years Experience", icon: Award },
+  { number: "300+", label: "Happy Clients", icon: Users },
+  { number: "50+", label: "Projects Completed", icon: Building2 },
   { number: "95%", label: "Client Satisfaction", icon: TrendingUp },
 ];
 
