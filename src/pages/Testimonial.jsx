@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "SURENDER KUMAR",
+    name: "SURENDER",
     title: "DIRECTOR (CITIZEN PROPERTIES)",
     highlight:
       "Thoroughly Professional, Helpful and Understanding Real Estate Agents!",

@@ -98,7 +98,7 @@ const Footer = () => (
               </div>
               <div>
                 <span className="font-semibold text-purple-300 block">E-Mail:</span>
-                <span className="text-gray-300">info@LVYProperties.com</span>
+                <span className="text-gray-300">lvyestate@outlook.com</span>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ const Footer = () => (
               <div className="w-8 h-0.5 bg-gradient-to-r from-amber-400 to-amber-600"></div>
             </h3>
             <p className="text-gray-300 leading-relaxed mb-6">
-              With over 30 years of experience in real estate, we partner with
+              With over 10 years of experience in real estate, we partner with
               owners and professionals to build high-quality projects. Our commitment
               to excellence and customer satisfaction sets us apart in the industry.
             </p>
