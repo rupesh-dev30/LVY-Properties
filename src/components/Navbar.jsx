@@ -29,18 +29,18 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/#about' },
     { name: 'Projects', href: '#projects', hasDropdown: true },
-    { name: 'Blogs', href: '#blogs' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'Blogs', href: '/#blogs' },
+    { name: 'Contact Us', href: '/#contact' },
   ];
 
   const projectItems = [
-    { name: 'Luxury Villas', href: '#luxury-villas' },
-    { name: 'Modern Apartments', href: '#apartments' },
-    { name: 'Commercial Spaces', href: '#commercial' },
-    { name: 'Investment Properties', href: '#investment' }
+    { name: 'Agriculture Land', href: '/agriculture-land' },
+    { name: 'Farm House', href: '/farm-house' },
+    { name: 'Plots', href: '/plots' },
+    { name: 'Flats', href: '/flats' }
   ];
 
   return (
@@ -49,7 +49,7 @@ const Navbar = () => {
         ? 'bg-white/95 backdrop-blur-md shadow-xl' 
         : 'bg-gradient-to-b from-black/20 to-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto lg:px-4">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
