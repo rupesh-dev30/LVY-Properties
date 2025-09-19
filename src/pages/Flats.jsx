@@ -3,7 +3,7 @@ import React from "react";
 const Flats = () => {
   return (
     <div>
-      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/src/assets/hero.jpeg')] bg-cover bg-center">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/src/assets/hero2.jpeg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-5xl md:text-6xl font-bold text-white z-10">
           Luxury Flats
